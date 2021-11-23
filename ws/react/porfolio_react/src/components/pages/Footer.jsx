@@ -1,11 +1,14 @@
 import React from 'react'
+import { useNavigate } from 'react-router';
 import { Link, useLocation} from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import {faGithub, faLinkedin, faStackOverflow, faMedium} from "@fortawesome/free-brands-svg-icons"
 
 const Footer = () => {
-    
+   
+  const navigate = useNavigate()
+
   const usePathname = () => {
       const location = useLocation();
       return location.pathname;
